@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InventoryApp.Utility;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,16 @@ namespace InventoryApp
         private void calculatorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("calc.exe");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            lblUserInfo.Text = string.Format("Username:{0}, UserID:{1}, Role: {2}", SessionHelper.UserName, SessionHelper.UserID, SessionHelper.UserRole);
+        }
+
+        private void MasterMDIForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
