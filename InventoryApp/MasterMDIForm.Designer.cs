@@ -38,6 +38,7 @@
             this.addCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.broadwayContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblUserInfo = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,11 +125,23 @@
             this.broadwayContactToolStripMenuItem.Text = "Broadway Contact";
             this.broadwayContactToolStripMenuItem.Click += new System.EventHandler(this.broadwayContactToolStripMenuItem_Click);
             // 
+            // lblUserInfo
+            // 
+            this.lblUserInfo.AutoSize = true;
+            this.lblUserInfo.BackColor = System.Drawing.Color.RosyBrown;
+            this.lblUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserInfo.Location = new System.Drawing.Point(1230, 7);
+            this.lblUserInfo.Name = "lblUserInfo";
+            this.lblUserInfo.Size = new System.Drawing.Size(46, 18);
+            this.lblUserInfo.TabIndex = 2;
+            this.lblUserInfo.Text = "label1";
+            // 
             // MasterMDIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblUserInfo);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -155,5 +168,6 @@
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem broadwayContactToolStripMenuItem;
+        private System.Windows.Forms.Label lblUserInfo;
     }
 }

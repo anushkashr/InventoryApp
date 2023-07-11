@@ -1,4 +1,5 @@
 ﻿using Inventory.Business.Layer.UserRepository;
+using InventoryApp.Utility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,9 +29,16 @@ namespace InventoryApp
             string password = txtPassword.Text;
 
             bool isValidUser = _userRepository.IfExists(email, password);
+            DataTable dt = _userRepository.GetUserByEmail(email);
 
             if (isValidUser)
             {
+                DataRow row = dt.Rows[0];
+                SessionHelper.UserName = row["FirstName"].ToString();
+                SessionHelper.UserRole = row["UserRole"].ToString();
+                SessionHelper.UserID = Convert.ToInt32(row["UserID"].ToString());
+
+
                 MasterMDIForm masterForm = new MasterMDIForm();
                 masterForm.Show();
                 this.Hide();

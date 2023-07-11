@@ -16,6 +16,7 @@ namespace InventoryApp
         public MasterMDIForm()
         {
             InitializeComponent();
+            //lblUserInfo.Text = "Welcome " + firstName + "!";
         }
 
         private void broadwayContactToolStripMenuItem_Click(object sender, EventArgs e)
