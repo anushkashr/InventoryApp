@@ -30,13 +30,23 @@ namespace InventoryApp
             Process.Start("calc.exe");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void MasterMDIForm_Load(object sender, EventArgs e)
         {
             lblUserInfo.Text = string.Format("Username:{0}, UserID:{1}, Role: {2}", SessionHelper.UserName, SessionHelper.UserID, SessionHelper.UserRole);
         }
 
-        private void MasterMDIForm_Load(object sender, EventArgs e)
+        private void addCategoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ManageCategory manageCategory = new ManageCategory();
+            manageCategory.MdiParent = this;
+            manageCategory.Show();
+        }
+
+        private void manageProductsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManageProducts manageProducts = new ManageProducts();
+            manageProducts.MdiParent = this;
+            manageProducts.Show();
 
         }
     }

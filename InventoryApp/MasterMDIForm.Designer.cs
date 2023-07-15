@@ -30,23 +30,23 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.administrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.categoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roleManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mngeCategory = new System.Windows.Forms.ToolStripMenuItem();
+            this.productsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageProductsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.broadwayContactToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblUserInfo = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.AutoSize = false;
-            this.menuStrip1.BackColor = System.Drawing.Color.RosyBrown;
+            this.menuStrip1.BackColor = System.Drawing.Color.DodgerBlue;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.administrationToolStripMenuItem,
@@ -65,31 +65,8 @@
             this.userManagementToolStripMenuItem,
             this.roleManagementToolStripMenuItem});
             this.administrationToolStripMenuItem.Name = "administrationToolStripMenuItem";
-            this.administrationToolStripMenuItem.Size = new System.Drawing.Size(137, 25);
+            this.administrationToolStripMenuItem.Size = new System.Drawing.Size(137, 46);
             this.administrationToolStripMenuItem.Text = "Administration";
-            // 
-            // categoryToolStripMenuItem
-            // 
-            this.categoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addCategoryToolStripMenuItem});
-            this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
-            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(92, 25);
-            this.categoryToolStripMenuItem.Text = "Category";
-            // 
-            // productsToolStripMenuItem
-            // 
-            this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
-            this.productsToolStripMenuItem.Size = new System.Drawing.Size(89, 25);
-            this.productsToolStripMenuItem.Text = "Products";
-            // 
-            // reportsToolStripMenuItem
-            // 
-            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.calculatorToolStripMenuItem,
-            this.broadwayContactToolStripMenuItem});
-            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(82, 25);
-            this.reportsToolStripMenuItem.Text = "Utilities";
             // 
             // userManagementToolStripMenuItem
             // 
@@ -105,12 +82,46 @@
             this.roleManagementToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.roleManagementToolStripMenuItem.Text = "Role Management";
             // 
-            // addCategoryToolStripMenuItem
+            // categoryToolStripMenuItem
             // 
-            this.addCategoryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.addCategoryToolStripMenuItem.Name = "addCategoryToolStripMenuItem";
-            this.addCategoryToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
-            this.addCategoryToolStripMenuItem.Text = "Add Category";
+            this.categoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mngeCategory});
+            this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
+            this.categoryToolStripMenuItem.Size = new System.Drawing.Size(92, 46);
+            this.categoryToolStripMenuItem.Text = "Category";
+            // 
+            // mngeCategory
+            // 
+            this.mngeCategory.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.mngeCategory.Name = "mngeCategory";
+            this.mngeCategory.Size = new System.Drawing.Size(189, 24);
+            this.mngeCategory.Text = "Manage Category";
+            this.mngeCategory.Click += new System.EventHandler(this.addCategoryToolStripMenuItem_Click);
+            // 
+            // productsToolStripMenuItem
+            // 
+            this.productsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageProductsToolStripMenuItem});
+            this.productsToolStripMenuItem.Name = "productsToolStripMenuItem";
+            this.productsToolStripMenuItem.Size = new System.Drawing.Size(89, 46);
+            this.productsToolStripMenuItem.Text = "Products";
+            // 
+            // manageProductsToolStripMenuItem
+            // 
+            this.manageProductsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.manageProductsToolStripMenuItem.Name = "manageProductsToolStripMenuItem";
+            this.manageProductsToolStripMenuItem.Size = new System.Drawing.Size(187, 24);
+            this.manageProductsToolStripMenuItem.Text = "Manage Products";
+            this.manageProductsToolStripMenuItem.Click += new System.EventHandler(this.manageProductsToolStripMenuItem_Click);
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calculatorToolStripMenuItem,
+            this.broadwayContactToolStripMenuItem});
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(82, 46);
+            this.reportsToolStripMenuItem.Text = "Utilities";
             // 
             // calculatorToolStripMenuItem
             // 
@@ -130,29 +141,18 @@
             // lblUserInfo
             // 
             this.lblUserInfo.AutoSize = true;
-            this.lblUserInfo.BackColor = System.Drawing.Color.MistyRose;
+            this.lblUserInfo.BackColor = System.Drawing.Color.White;
             this.lblUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserInfo.Location = new System.Drawing.Point(1010, 15);
             this.lblUserInfo.Name = "lblUserInfo";
             this.lblUserInfo.Size = new System.Drawing.Size(0, 18);
             this.lblUserInfo.TabIndex = 2;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(920, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "User Info";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // MasterMDIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(986, 450);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblUserInfo);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
@@ -176,12 +176,12 @@
         private System.Windows.Forms.ToolStripMenuItem userManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem roleManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addCategoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mngeCategory;
         private System.Windows.Forms.ToolStripMenuItem productsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem broadwayContactToolStripMenuItem;
         private System.Windows.Forms.Label lblUserInfo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem manageProductsToolStripMenuItem;
     }
 }

@@ -25,6 +25,11 @@ namespace InventoryApp
         
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            LoginUser();
+        }
+
+        private void LoginUser()
+        {
             string email = txtEmail.Text;
             string password = txtPassword.Text;
 
@@ -46,6 +51,15 @@ namespace InventoryApp
             else
             {
                 MessageBox.Show("Invalid login info", "Invalid Login Error");
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //btnLogin_Click(sender, e); calling the method below instead
+                LoginUser();
             }
         }
     }
